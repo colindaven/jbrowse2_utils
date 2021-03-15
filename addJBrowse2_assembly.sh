@@ -1,6 +1,6 @@
 #!/bin/bash
 ## Colin Davenport, March 2021
-## Run on rcug-galaxy1
+## Run on server with JBrowse2 installed
 
 fasta_name=$1
 
