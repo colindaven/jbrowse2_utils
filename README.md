@@ -17,3 +17,7 @@ As usual with JBrowse2
  * then use the sort `script sort_tabix_gff3.sh` to sort GFF and GTF annotations 
  * Add tracks using `runbatch_jbrowse2_add_track.sh`
  * Batch add further BAM tracks etc `runbatch_jbrowse2_add_track.sh`
+
+
+Problems ? 
+- Just write an issue
