@@ -1,4 +1,6 @@
-# Bash scripts for writing assemblies and tracks to JBrowse2.
+# Bash scripts for JBrowse2.
+
+Write assemblies and tracks to JBrowse2.
 
 This should be self explanatory for the most part, but helpful to speed up adding large numbers of tracks.
 
