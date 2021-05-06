@@ -8,7 +8,7 @@ if [ -z $fasta_name ];
 	then
 	echo "Specify fasta as argument 1"
 	echo "Usage bash addJBrowse2_assembly.sh x.fasta   # x.fasta must have an x.fasta.fai"
-	echo "bash addJBrowse2_assembly.sh ../../lager2/rcug/seqres/RN/Rattus_norvegicus.Rnor_6.0.dna.toplevel.fa &"
+	echo "bash addJBrowse2_assembly.sh ../../mnt/ngsnfs/seqres/RN/Rattus_norvegicus.Rnor_6.0.dna.toplevel.fa &"
 	exit
 else
 	echo "Input file fasta: $1"
