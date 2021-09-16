@@ -38,7 +38,7 @@ if [ -z $subDir_name ];		# sub directory of JBrowse to insert data into.
         then
         echo "Specify subDir as argument 3"
         echo "Usage bash addJBrowse2_track.sh bam_or_gff assembly subDir      #"
-        echo "##### Existing subDirs  #### "
+        echo "##### Existing subDirs (only use the last directory, not the full path! ) #### "
         ls -dp $jbrowse/*  | grep '/$'
         exit 1
 else
