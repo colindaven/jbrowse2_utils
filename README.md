@@ -1,13 +1,13 @@
 # Bash scripts for JBrowse2.
 
-Write assemblies and tracks to JBrowse2.
+Write assemblies and tracks to JBrowse2. Only tested on Ubuntu Linux 20.04 64 bit.
 
 This should be self explanatory for the most part, but helpful to speed up adding large numbers of tracks.
 
 ## Requirements
- * genometools
- * tabix
- * JBrowse2
+ * genometools (sorting gff3 files)
+ * tabix (index gff3 and bed files9
+ * JBrowse2 
  * bash
 
 ## Installation
