@@ -29,7 +29,7 @@ if [ -z $assembly_name ];	#name of assembly
         echo "Specify assembly as argument 2"
         echo "Usage bash addJBrowse2_track.sh bam_or_gff assembly subDir category     #"
 	echo "##### Configs #### "
-	grep name "$jbrowse/config.json"
+	grep name "$jbrowse/config.json" | grep -v trm | grep -v bam | grep -v gff | grep -v bed | grep -v calmd | grep -v sam| grep -v Session    
         exit 1
 else
         echo "Input config: $2"
