@@ -5,9 +5,9 @@
 echo "INFO: Add JBrowse2 tracks"
 
 # Change these as appropriate
-ref_asm=Rattus_norvegicus.Rnor_6.0.dna.toplevel
-subDir=Rnor6
-category_name="test"
+ref_asm="GRCh38_no_alt"
+subDir="GRCh38"
+category_name="2021_037723"
 
 
 # Add BAMs
@@ -30,6 +30,15 @@ done
 
 # Add BEDs
 for i in `ls *bed.gz`
+
+        do
+                echo $i
+		bash addJBrowse2_track.sh $i $ref_asm  $subDir $category_name
+
+done
+
+# Add vcfs
+for i in `ls *vcf.gz`
 
         do
                 echo $i

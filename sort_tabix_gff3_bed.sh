@@ -1,7 +1,7 @@
 #!/bin/bash
-# Colin Davenport, March 2021
+# Colin Davenport, Sept 2021
 # Requires genometools etc, sudo apt install genometools tabix bgzip
-echo "Usage: bash sort_gff.sh input.gff OR input.bed"
+echo "Usage: bash sort_gff.sh input.gff OR input.bed OR input.vcf"
 
 inGFF=$1
 tmp=$inGFF
@@ -23,7 +23,7 @@ if [[ $inGFF == *"gff"* ]];
 	# Index the bgzipped output with tabix
 	tabix $prefix.s.gff.gz
 fi
-if [[ $inGFF == *"bed"* ]];
+if [[ $inGFF == *"bed"* ]] ;
         then
         echo "Found bed file"
 
@@ -36,6 +36,21 @@ if [[ $inGFF == *"bed"* ]];
 
         # Index the bgzipped output with tabix
         tabix $prefix.bed.gz
+
+fi
+if [[ $inGFF == *"vcf"* ]] ;
+        then
+        echo "Found  vcf file"
+
+	# Does NOT sort vcf?
+        # Run genometools to sort gff3
+        #gt gff3 -sortlines -tidy -retainids $inGFF > $prefix.s.gff
+
+        # Bgzip the output
+        bgzip -f $prefix.vcf
+
+        # Index the bgzipped output with tabix
+        tabix $prefix.vcf.gz
 
 fi
 
