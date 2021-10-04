@@ -3,7 +3,7 @@
 ## Run on server where JBrowse2 was installed
 ## Insert a track, eg BAM with BAI, or sorted and tabixed GFF, into JBrowse2
 
-# Needs 4 arguments, here:
+# Needs 4 arguments, here (these are successively prompted by the script if not provided):
 echo "Usage: bash addJBrowse2_track.sh bam_or_gff assembly subDir category"
 track_name=$1
 assembly_name=$2
@@ -14,6 +14,8 @@ category_name=$4
 jbrowse="/data/jbrowse"
 origDir=$(pwd)
 
+version=0.1
+echo "INFO: addJBrowse2_track.sh version: " $version
 
 if [ -z $track_name ];
 	then
@@ -65,7 +67,7 @@ if [ -z $category_name ];
         echo "Specify all 4 args! Usage bash addJBrowse2_track.sh bam_or_gff assembly subDir category"
 else
 	echo "Actually run the insert command: "
-        echo "INFO: Command: jbrowse add-track $origDir"/"$track_name --load copy --subDir $subDir_name -a $assembly_name --category $category_name --force"
-	jbrowse add-track $origDir"/"$track_name --load copy --subDir $subDir_name -a $assembly_name --category $category_name --force
+        echo "INFO: Command: jbrowse add-track $origDir"/"$track_name --load copy --subDir $subDir_name -a $assembly_name --category $category_name --force --name $(basename ${track_name})"
+	jbrowse add-track $origDir"/"$track_name --load copy --subDir $subDir_name -a $assembly_name --category $category_name --force --name $(basename ${track_name})
 fi
 
