@@ -10,7 +10,7 @@ assembly_name=$2
 subDir_name=$3
 category_name=$4
 
-# Change this to directory where you installed jbrowse
+# Change this to directory where you installed jbrowse2
 jbrowse="/data/jbrowse"
 origDir=$(pwd)
 
