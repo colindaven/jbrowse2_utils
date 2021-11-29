@@ -6,7 +6,7 @@ This should be self explanatory for the most part, but helpful to speed up addin
 
 ## Requirements
  * genometools (sorting gff3 files)
- * tabix (index gff3 and bed files9
+ * tabix (index gff3 and bed files)
  * JBrowse2 
  * bash
 
