@@ -18,8 +18,8 @@ This should be self explanatory for the most part, but helpful to speed up addin
 As usual with JBrowse2
  * first add an assembly - fasta input: `addJBrowse2_assembly.sh`
  * then use the sort `script sort_tabix_gff3_bed.sh` to sort GFF and GTF or BED annotations 
- * Add tracks using `runbatch_jbrowse2_add_track.sh`
- * Batch add further BAM tracks etc `runbatch_jbrowse2_add_track.sh`, which wraps  `runbatch_jbrowse2_add_track.sh`
+ * Add tracks using `addJBrowse2_track.sh`
+ * Batch add further BAM tracks etc `runbatch_jbrowse2_add_track.sh`, which wraps  `addJBrowse2_track.sh`
 
 
 ## Problems ? 
